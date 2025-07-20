@@ -139,7 +139,7 @@ def main():
             weight=args.weight)
 
         # save faces
-        for idx, (cropped_face, restored_face) in enumerate(zip(cropped_faces, restored_faces)):
+        '''for idx, (cropped_face, restored_face) in enumerate(zip(cropped_faces, restored_faces)):
             # save cropped face
             save_crop_path = os.path.join(args.output, 'cropped_faces', f'{basename}_{idx:02d}.png')
             imwrite(cropped_face, save_crop_path)
@@ -153,7 +153,7 @@ def main():
             # save comparison image
             cmp_img = np.concatenate((cropped_face, restored_face), axis=1)
             imwrite(cmp_img, os.path.join(args.output, 'cmp', f'{basename}_{idx:02d}.png'))
-
+        '''
         # save restored img
         if restored_img is not None:
             if args.ext == 'auto':
